@@ -1,0 +1,11 @@
+{
+  "name": "map-obfuscation",
+  "version": "2.0.0",
+  "description": "This package obfuscates coordinates to improve user privacy.",
+  "main": "obfuscate.js",
+  "license": "MIT",
+  "keywords": [ "privacy", "maps", "obfuscation" ],
+  "author": {
+    "name": "Samir Rangwalla"
+  }
+}
