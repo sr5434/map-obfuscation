@@ -1,4 +1,5 @@
 # MapObfuscation
+[NPM Package](https://www.npmjs.com/package/map-obfuscation/)
 This package obfuscates coordinates to improve user privacy. The code has some detailed comments if you want to learn more about the inner workings of this algorithm.
 # Example Usage
 ```
