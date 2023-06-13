@@ -1,6 +1,6 @@
 {
   "name": "map-obfuscation",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "This package obfuscates coordinates to improve user privacy.",
   "main": "obfuscate.js",
   "license": "MIT",
