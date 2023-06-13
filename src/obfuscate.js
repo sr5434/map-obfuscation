@@ -5,7 +5,7 @@ function round(value, precision) {
 	return Math.round(value * multiplier) / multiplier;
 }
 //This function turns WGS84 coordinates and scrambles them. wgsLat is the latitude and wgsLng is the longitude.
-function wgs2sd(wgsLat, wgsLng, deltaMultiplier = 1) {
+function wgs2sd(wgsLat, wgsLng, deltaMultiplier = 1, precision=3) {
 	//Use sine and cosine to claculate the initial deltas for lat/lng
 	let dlat = Math.sin(wgsLat);
 	for(let i = 0; i < 7; i++){
@@ -19,8 +19,8 @@ function wgs2sd(wgsLat, wgsLng, deltaMultiplier = 1) {
 	dlat = dlat*deltaMultiplier;
 	dlng = dlng*deltaMultiplier;
 	//Add the latitude/longitude to their respective deltas
-	//Then round the new values to the 1000ths place
-	return { "lat": round(wgsLat + dlat, 3), "lng": round(wgsLng + dlng, 3) };
+	//Then round the new values as finely as the user would like
+	return { "lat": round(wgsLat + dlat, precision), "lng": round(wgsLng + dlng, precision) };
 }
 console.log(wgs2sd(12.345, 67.890));//Test
 module.exports.wgs2sd = wgs2sd;//Export the function
